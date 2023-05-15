@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuck Norris Joke App</title>
+</head>
+<body>
+    <div style="flex: auto; justify-content: center; align-items: center; ">
+        <div style="padding: 20px; text-align: center; background-color: orange; color: white;">
+            <h1 style="text-align: center; font-size: 40px; font-weight: bolder">Chuck Norris Joke</h1>
+            <small>random joke from chuck norris api</small>
+        </div>
+        <div style="margin-top: 0px; padding: 10px 0px; text-align: center; background-color: gray; color: white;
+        font-size: 30px"
+             th:each="joke : ${index}">
+            <p th:text="${joke}"></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
